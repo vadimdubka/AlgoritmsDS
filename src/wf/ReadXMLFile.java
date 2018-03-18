@@ -17,9 +17,8 @@ public class ReadXMLFile {
     public static void main(String argv[]) {
         
         try {
-            
-            DocumentBuilderFactory dbFactory   = DocumentBuilderFactory.newInstance();
-            DocumentBuilder        dBuilder    = dbFactory.newDocumentBuilder();
+            DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
             String text = "<?xml version=\"1.0\"?>\n" +
                               "<company>\n" +
                               "    <staff id=\"1001\">\n" +
@@ -35,8 +34,8 @@ public class ReadXMLFile {
                               "        <salary>200000</salary>\n" +
                               "    </staff>\n" +
                               "</company>";
-            InputStream            inputStream = new ByteArrayInputStream(text.getBytes(StandardCharsets.UTF_8));
-            Document               doc         = dBuilder.parse(inputStream);
+            InputStream inputStream = new ByteArrayInputStream(text.getBytes(StandardCharsets.UTF_8));
+            Document doc = dBuilder.parse(inputStream);
             
             //optional, but recommended
             //read this - http://stackoverflow.com/questions/13786607/normalization-in-dom-parsing-with-java-how-does-it-work
